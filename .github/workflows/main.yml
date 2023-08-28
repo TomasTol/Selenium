@@ -1,0 +1,23 @@
+name: Subir imagen docker
+
+on:
+  push:
+    branches:
+      - desarrollo
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Build image
+      run: docker build -t tomastol/selenium .
+      
+    - name: Login en DockerHub
+      run: docker login -u tomastol -p ${{ secrets.DOCKERHUB_PASSWORD }}
+      
+    - name: Push image
+      run: docker push tomastol/selenium
