@@ -21,3 +21,6 @@ jobs:
       
     - name: Push image
       run: docker push tomastol/selenium
+
+    - name: Push image
+      run: npm run sample-test
