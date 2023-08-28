@@ -24,3 +24,9 @@ jobs:
       
     - name: Push image
       run: docker push tomastol/selenium:latest
+      
+    - name: instalar dependencias
+      run: npm install
+
+    - name: run test
+      run: npm run sample-test
