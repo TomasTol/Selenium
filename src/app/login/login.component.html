@@ -1,33 +1,17 @@
 <div>
     <form>
         <div>
-            <input type = "email" name = "email" placeholder="Email" class="form-control">
-
-
+            <input #name type = "email" name = "email" placeholder="Email" class="form-control">
         </div>
-
         <div>
-            <input type = "password" name = "password" placeholder="Password" class="form-control">
-
-
+            <input #password type = "password" name = "password" placeholder="Password" class="form-control">
         </div>
         <div>
             <br/><br/>
-
-
-
-
         </div>
-
         <div>
-            <button  type="submit" class="btn btn-primary">Login</button>
- 
-
+            <button (click)="login(name.value, password.value)"  type="submit" class="btn btn-primary">Login</button>
         </div>
-
-
+        {{mensajeError}}
     </form>
-
-
-
 </div>

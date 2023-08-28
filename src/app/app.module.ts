@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { Route, Routes } from '@angular/router';
+import { CargaComponent } from './carga/carga.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    CargaComponent
   ],
   imports: [
     BrowserModule,
